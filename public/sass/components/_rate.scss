@@ -1,0 +1,86 @@
+
+.clubRateWrapper {
+  @include span(12);
+
+  .club {
+    @include span(2.8 of 12);
+    margin-left:span(4.52 wide of 12);
+
+    .imgContainer {
+
+      &::after {
+        content: "";
+        display: block;
+        position:relative;
+        width: 104%;
+        border:3.5px solid $pinkTextColor;
+        border-radius: 100%;
+        padding-bottom: 100%;
+        background: url('http://knockoutvip.com/wp-content/uploads/2014/05/drais-las-vegas-logo.png') no-repeat scroll 0 0 / cover ;
+        z-index:-1;
+        background-size:contain;
+        object-fit: contain;
+        box-shadow: 0 0 9px #e81e79;
+
+      }
+
+      .innerImgContainer {
+        float: left;
+        position: relative;
+        bottom: -0.2rem;
+        left: 0.24rem;
+        width: 100.7%;
+        padding-bottom: 100%;
+        border-radius: 50%;
+        background: rgba(51, 0, 102, .8);
+      }
+    }
+  }
+
+  .rateContainer {
+    @include span(5 of 12);
+    margin-left:span(3.5 wide of 12);
+    margin-top:3rem;
+
+      & img:first-child {
+      margin-left:span(1.1 wide of 5);
+    }
+
+    & img {
+      @include span(0.55 of 5 no-gutters);
+      background-size:cover;
+      margin-right:2.5%;
+    }
+  }
+
+  .bttnWrapper {
+    @include span(5.5 of 12);
+    margin-left:span(3.25 wide of 12);
+    margin-top:2.7rem;
+
+    & button {
+      @include span(2 of 5.5 no-gutters);
+      padding:0.5rem 0.5rem;
+      background:transparent;
+      border-radius:5px;
+      border:2px solid $pinkTextColor;
+      font-size:$large;
+    }
+
+    & button:nth-child(1) {
+      margin-left:span(0.65 wide of 5.5);
+      background:$pinkTextColor;
+      color:#fff;
+
+    }
+
+    & button:nth-child(2) {
+      margin-left:1rem;
+      border:2px solid $pinkTextColor;
+      color:$pinkTextColor;
+    }
+  }
+}
+
+
+

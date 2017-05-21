@@ -1,0 +1,164 @@
+
+  .profileFormComponent {
+    @include span(12);
+    margin-top:1rem;
+    margin-bottom:6rem;
+
+    .accountDetailsForm  {
+      margin-left:span(0.85 wide of 12);
+    }
+
+    .accountDetailsForm, .settingsComponent {
+      @include span(5 of 12);
+      margin-right:2rem;
+
+      & h2 {
+        @include span(full);
+        border-bottom:2ograpx solid $pinkTextColor;
+        margin-bottom:1.6rem;
+      }
+
+      .username, .email, .password, .accountDetailsFormBttnWrapper {
+        @include span(full);
+        margin-bottom:0.8rem;
+
+        ::-webkit-input-placeholder {
+          color: $white;
+          opacity:.7;
+          font-size:$medium;
+        }
+      }
+
+      .email, .username, .password {
+        & span {
+          @include span(2 of 5);
+          margin-top:-2.2rem;
+          margin-left:3.55rem;
+          font-size:$medium;
+          color:$white;
+        }
+      }
+
+      #username, #email, #password {
+        @include span(full);
+        padding:0.7rem 0.8rem 0.7rem 0;
+        text-align:right;
+        border:none;
+        border-radius:5px;
+        outline:none;
+      }
+
+      @each $id, $image, $position, $size, $repeat, $color in
+                      (username, userIcon, 1.4rem center, 1.4rem, no-repeat, rgba(255,255,255,.2)),
+                      (email, emailIcon, 1.4rem center, 1.4rem, no-repeat, rgba(255,255,255,.2)),
+                      (password, lockIcon, 1.4rem center, 1.4rem, no-repeat, rgba(255,255,255,.2)), {
+        ##{$id} {
+          background:url("../../images/#{$image}.png") $position / $size $repeat $color;
+
+        }
+      }
+
+      #accountDetails {
+        text-transform:uppercase;
+      }
+
+      .accountDetailsFormBttnWrapper {
+        #male, #female {
+          @include span(2.55 of 5 no-gutters);
+          margin:1.25rem 0 1.25rem 0;
+          padding:0.6rem;
+          font-size:$medium;
+          border:1px solid $pinkTextColor;
+        }
+
+        #male {
+          background:url("../../images/maleIcon@2x.png") 30% 39% / 1.5rem no-repeat;
+          border-top-left-radius:5px;
+          border-bottom-left-radius:5px;
+          color:$pinkTextColor;
+        }
+
+        #female {
+          background:url("../../images/femaleIcon@2x.png") 26% 60% / 1.2rem no-repeat $pinkTextColor;
+          border-top-right-radius:5px;
+          border-bottom-right-radius:5px;
+          color:$white;
+        }
+      }
+
+      .settingsCheckboxexWrapper {
+        @include span(full);
+
+        .pushNotifications, .useLocation, .contact {
+          @include span(full);
+          padding:0.7rem 0.7rem 0.7rem 0;
+          margin-bottom:0.8rem;
+
+          & span {
+            @include span(2.5 of 5 first);
+            font-size:$medium;
+          }
+
+          input[type="checkbox"] {
+            display: none;
+          }
+          label {
+            @include span(0.5 of 5 last);
+            margin-top:0.2rem;
+            text-align: center;
+            font-size: $medium;
+
+            &:hover {
+              cursor:pointer;
+            }
+          }
+          input[type="checkbox"] + label:before {
+            display: inline-block;
+            width: 1.2rem;
+            height: 1.2rem;
+            margin: 0 .5rem 0 0;
+            content: "\00a0";
+            border-radius: 3px;
+            vertical-align: top;
+            background-color:transparent;
+            border: solid 1px darken(#fff, 10%);
+          }
+          input[type="checkbox"]:checked + label:before {
+            content: "\2713";
+            background-color: transparent;
+            color: $pinkTextColor;
+            font-size:$smallest;
+            text-align: center;
+            border-color:$white;
+          }
+        }
+      }
+    }
+
+    .actionBttnsWrapper {
+      @include span(3 of 12);
+      margin-left:span(4.5 wide of 12);
+      margin-top:2rem;
+
+      & button:first-child {
+        margin-bottom:1rem;
+      }
+
+      .saveProfileBttn {
+        @include span(full);
+        border:none;
+        background:$pinkTextColor;
+        color:$white;
+        font-size:$medium;
+        border-radius:5px;
+        padding:0.6rem;
+      }
+
+      .cancelBttn {
+        @include span(full);
+        border:none;
+        background:transparent;
+        color:$pinkTextColor;
+      }
+    }
+  }

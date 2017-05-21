@@ -1,0 +1,27 @@
+$susy: (
+        columns: 12,
+        container: 1120px,
+        gutters: .15,
+        math: fluid,
+        global-box-sizing: border-box,
+
+);
+
+$maxPageWidth: 1024px;
+
+//// Object colors
+$backgroundColor: #03000d;
+
+//// Text colors
+$white:#ffffff;
+$pinkTextColor:#e81e79;
+$pinkTransColor: rgba(232, 30, 121, 0.6);
+$purpleTextColor:#3f1389;
+
+////fonts
+$smallest:0.85rem;
+$small:0.95rem;
+$medium:1.1rem;
+$large:1.25rem;
+
+$mediumResize:1.45vw;

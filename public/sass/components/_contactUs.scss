@@ -1,0 +1,31 @@
+.contactUsComponent {
+  @include span(8 of 10);
+  margin-right: 0;
+  margin-left: 10%;
+  font-size: 1.1em;
+  p {
+    float: left;
+    clear: both;
+    margin-bottom: 0;
+    margin-left:31%;
+    font-size:1.2em;
+
+    a {
+      color: $pinkTextColor;
+      font-size: 2em;
+      margin-top: -.2em;
+      float: left;
+      clear: left;
+      width: 1.3em;
+      min-height: 4em;
+      //margin:
+    }
+
+    &.emailInfo {
+      a {
+        min-height: 1em;
+      }
+    }
+
+  }
+}

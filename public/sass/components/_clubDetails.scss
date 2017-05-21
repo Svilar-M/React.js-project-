@@ -1,0 +1,86 @@
+
+.clubDetailsWrapper {
+  @include span(12);
+  background: url(../images/clubDetailsBack.jpg) no-repeat center center;
+  width: 100vw;
+  height: 90vh;
+  z-index: 1;
+  background-size: cover;
+  padding-top: 0;
+  .clubDetailsHeadline {
+    @include span(full);
+    margin-top: 0; //-1.5rem;
+    background: $pinkTransColor;
+    h1 {
+      padding: 0;
+      margin: .7rem;
+    }
+    .rateWrapper {
+      @include span(2 of 12);
+      margin-left: span(5.2 wide of 12);
+      background: url("../../images/fiveStar.png") top 20% left 23% / 15% no-repeat;
+      padding:0;
+
+      p {
+        @include span(1.2 of 2 last);
+        text-align: left;
+        margin-top: 0.55rem;
+        margin-right: span(0.1 wide of 2);
+        padding: 0 0 0 0.3rem;
+        font-size: $large;
+      }
+    }
+  }
+
+  .bttnWrapper {
+    @include span(full);
+    position: fixed;
+    top: 10rem;
+    height: 33.5rem;
+
+    & button {
+      @include span(full);
+      position: fixed;
+      top: 4rem;
+      height: 34rem;
+      border: none;
+      background: transparent;
+
+      .bttnInnerWrapper {
+        @include span(4 of 12);
+        margin-left: span(4 wide of 12);
+        height: 9rem;
+        margin-top: 4rem;
+        background: url('../../images/playBtn@2x.png') center center / 30% no-repeat;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.subFooterClubDetails {
+  @include container(100%);
+  position: fixed;
+  bottom: 10rem;
+  height: 5.5rem;
+  width: 100%;
+  margin-top: 33.5rem;
+  background: rgba(0, 0, 0, .8);
+
+  .subFooterWrapper {
+    @include span(6 of 12 no-gutters);
+    position: absolute;
+    height: 5.5rem;
+    top: 0;
+    margin-left: span(3 wide of 12);
+    background: url("../../images/cocktailIcon@2x.png") left 23% center / 9% no-repeat,
+    url("../../images/userIcon.png") right 23% center / 9% no-repeat;
+
+    & p {
+      text-align: center;
+      line-height: 1.5rem;
+      font-size: $medium;
+    }
+  }
+}
+

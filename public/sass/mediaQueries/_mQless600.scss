@@ -1,0 +1,199 @@
+@media(max-width: 600px) {
+
+
+  // HEADER //
+  header {
+
+    .leftMenu {
+      height:4.8vw;
+      margin-top:0.5rem;
+
+      a {
+        width:4vw;
+        height:4vw;
+        float:left;
+        font-size:$small;
+        padding-top:.11em;
+        margin-right:.3em;
+        margin-bottom:.9em;
+      }
+    }
+    .rightMenu {
+      @include span(1 of 3 last);
+      margin-top:0.65rem;
+
+      a {
+        left:0.03rem;
+        font-size:2.1vw;
+      }
+    }
+  }
+
+
+  // PROFILE PAGE //
+  .profileFormComponent {
+    .accountDetailsForm, .settingsComponent {
+      @include span(8 of 12);
+      margin-left:span(2 wide of 12);
+      margin-right:0;
+
+      .email, .username, .password {
+        & span {
+          margin-top:-2.11rem;
+        }
+      }
+
+      .accountDetailsFormBttnWrapper {
+        #male, #female {
+          @include span(4.05 of 8 no-gutters);
+          margin:1.25rem 0 1.25rem 0;
+          padding:0.6rem;
+          font-size:$small;
+        }
+        #male {
+          background:url("../../images/maleIcon@2x.png") 28% 39% / 1.5rem no-repeat local;
+        }
+        #female {
+          background:url("../../images/femaleIcon@2x.png") 23.5% 60% / 1.2rem no-repeat local $pinkTextColor;
+        }
+      }
+
+      .settingsCheckboxexWrapper {
+        .pushNotifications, .useLocation, .contact {
+          & span {
+            @include span(4 of 8 first);
+          }
+          label {
+            @include span(1.5 of 8 last);
+          }
+        }
+      }
+    }
+
+    .actionBttnsWrapper {
+      @include span(3 of 12);
+      margin-left:span(4.5 wide of 12);
+
+      .saveProfileBttn {
+        font-size:$small;
+      }
+    }
+  }
+
+
+  // CLUBS PAGE //
+   .subFooterClubs {
+     margin-top:-9rem;
+    .subFooterWrapper {
+      background:
+              url("../../images/cocktailIcon@2x.png") left 7% top 55% / 14% no-repeat,
+              url("../../images/userIcon.png") right 7.8% top 55% / 14% no-repeat;
+      & p {
+        margin-top:1.4rem;
+        font-size:$small;
+        line-height:1.25rem;
+      }
+    }
+  }
+
+
+  // CLUB DETAILS PAGE //
+  .clubDetailsWrapper{
+    .clubDetailsHeadline {
+      .rateWrapper {
+        background:url("../../images/fiveSfar.png") top 27% left 14% / 22% no-repeat;
+
+        & p {
+          font-size:$small;
+        }
+      }
+    }
+
+    .bttnWrapper {
+      & button {
+        .bttnInnerWrapper {
+          margin-top:-4rem;
+          background:url('../../images/playBtn@2x.png')  center center / 32% no-repeat;
+        }
+      }
+    }
+  }
+
+  .subFooterClubDetails {
+    margin-top:23rem;
+    .subFooterWrapper {
+      background:
+              url("../../images/cocktailIcon@2x.png") left 7% top 45% / 14% no-repeat,
+              url("../../images/userIcon.png") right 7.8% top 45% / 14% no-repeat;
+      & p {
+        margin-top:1.4rem;
+        font-size:$small;
+        line-height:1.25rem;
+      }
+    }
+  }
+
+
+  // RATE PAGE //
+  .clubRateWrapper {
+    .club {
+      .imgContainer {
+        .innerImgContainer {
+          bottom: -0.2rem;
+          left: 0.22rem;
+          width: 98.5%;
+          padding-bottom: 100.5%;
+        }
+      }
+    }
+
+    .bttnWrapper {
+      @include span(5 of 12);
+      margin-left:span(3.4 wide of 12);
+      margin-top:1.4rem;
+
+      & button {
+        font-size:$small;
+        padding:0.35rem 0.5rem;
+      }
+    }
+  }
+  // FOR RATE PAGE ONLY //
+  .clubRateWrapper >.rateContainer {
+    margin-top:1.5rem;
+  }
+
+
+  // CLUBS PAGE //
+  .clubsListComponent >.club {
+    & .imgContainer {
+      & .innerImgContainer {
+        bottom: -0.2rem;
+        left: 0.22rem;
+        width: 96.5%;
+        padding-bottom: 100.5%;
+      }
+    }
+  }
+
+
+  // LOGIN REGISTER //
+  .authComponent {
+
+    .formWrapper {
+      form {
+        .bttnWrapper {
+          @include span(4 of 7);
+          margin-left:span(1.5 wide of 7);
+
+          #login, #register {
+            font-size:$small;
+            padding:0.45rem 0.6rem;
+          }
+        }
+      }
+    }
+  }
+
+
+}

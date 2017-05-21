@@ -1,0 +1,56 @@
+header {
+  @include container(100%);
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top:0;
+  padding-top:1rem;
+
+  .logo {
+    @include span(1 of 3);
+    margin-left:span(1.2 wide of 12);
+    margin-right:0;
+    height: 2.5rem;
+    text-indent: -200%;
+    background: url('../images/logo.png') center center / contain  no-repeat;
+  }
+  .leftMenu {
+    @include span(0.85 of 3);
+    margin-top:0;
+    margin-right:0;
+    margin-bottom:0;
+    margin-left:span(0.05 wide of 3);
+
+    a {
+      background:$white;
+      color:$backgroundColor;
+      width:1.8em;
+      height:1.8em;
+      float:left;
+      font-size:$small;
+      padding-top:.25em;
+      margin-right:.3em;
+      margin-bottom:.6em;
+      @include cornerRadius(.9em, .9em, .9em, .9em);
+      &:hover{
+        background: $pinkTextColor;
+        color:$white;
+      }
+      &:active{
+        background: darken($pinkTextColor, 15%);
+        color:darken($white, 10%);
+      }
+    }
+  }
+  .rightMenu{
+    @include span(0.95 of 3 last);
+    margin-right:-.5rem;
+    text-align: right;
+    padding-right:0;
+    a{
+      font-size:$medium;
+      position:relative;
+      left:-1em;
+      padding-right:.2em;
+    }
+  }
+}

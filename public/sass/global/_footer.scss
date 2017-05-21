@@ -1,0 +1,43 @@
+footer {
+  @include container(100%);
+  padding-top: 3em;
+  position:fixed;
+  bottom:0;
+  width:100%;
+  padding-bottom:1rem;
+  background: rgba(0,0,0,.5);
+
+  .rightMenu {
+    @include span(1 of 2 last);
+    margin-right: 0;
+
+    a, p.copy {
+      @include span(1 of 3);
+      font-size:$smallest;
+      text-align: center;
+      margin-right: 0;
+
+      &.copy {
+        margin-right: 0;
+        @include span(1.2 of 3 last);
+        margin-top: 0;
+
+      }
+      img {
+        max-height: 1.2em;
+      }
+    }
+  }
+  .leftMenu {
+    @include span(1 of 2);
+    margin-right: 0;
+    padding-left: 1em;
+    a{
+      font-size:1.4em;
+      margin-right:.5em;
+      img {
+        height: 1em;
+      }
+    }
+  }
+}
